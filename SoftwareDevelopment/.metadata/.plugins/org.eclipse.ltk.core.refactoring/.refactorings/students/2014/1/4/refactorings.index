@@ -1,0 +1,6 @@
+1390426744396	Delete element
+1390438742560	Rename local variable 'devstep1'
+1390441687722	Extract constant 'ZERO'
+1390441698370	Extract constant 'ONE'
+1390441717273	Extract constant 'NEGATIVE_ONE'
+1390441732834	Extract constant 'NEGATIVE_TWO'

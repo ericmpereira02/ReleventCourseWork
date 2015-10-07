@@ -1,0 +1,6 @@
+1389928321263	Rename local variable 'x'
+1389928339306	Rename local variable 'y'
+1389930376995	Extract constant 'FULLSIZEPIE'
+1389930446001	Rename local variable 'Circle'
+1389930465121	Rename local variable 'Pi'
+1389930512554	Rename local variable 'RNG'

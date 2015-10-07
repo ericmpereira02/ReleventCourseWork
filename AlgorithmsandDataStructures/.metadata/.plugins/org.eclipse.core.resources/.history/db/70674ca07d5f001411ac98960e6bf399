@@ -1,0 +1,208 @@
+
+import java.util.Stack;
+
+public  class RedBlackTree<Key extends Comparable<Key>>{
+
+
+	private Node root;	 // pointer to the root
+
+	private class Node{
+
+		Node parent;
+		Node left;
+		Node right;
+		Key key;
+
+		boolean color;  // true - red, false - black
+
+
+		Node(Key key_){
+			this.key=key_;
+			this.parent = null;
+			this.left = null;
+			this.right = null;
+		}
+
+		public int getMaxBlackNodes(){
+			// calculate maximum number of the black nodes on the path to the leaf
+
+			int leftCount=0,rightCount=0;
+
+			if (this.left!=null) {
+				if (this.left.color==false) {
+					leftCount+=1;
+				}
+				leftCount+=this.left.getMaxBlackNodes();
+			}
+
+			if (this.right!=null) {
+				if (this.right.color==false) {
+					rightCount+=1;
+				}
+				rightCount+=this.right.getMaxBlackNodes();
+			}
+
+
+			return Math.max(leftCount, rightCount);
+		}
+
+		public Key getKey(){
+			return key;
+		}
+
+		public String toString(){
+			String result="";
+			if (color) {
+				result+=key.toString()+"_r";
+			}else{
+				result+=key.toString()+"_b";
+			}
+			return result;
+		}
+
+
+	}
+
+	public void insert(Key key) {
+		// insert key into the tree
+		
+	}
+
+	public void delete(Key key) {
+		// delete key from the 
+	}
+
+	public Key findMinimum() {
+		// find minimum
+	}
+
+	public Key findMaximum() {
+		// find maximum
+	}
+
+	public String inorderTreeWalk() {
+
+		// return string representing inorder tree walk
+	}
+
+	
+	public String toString(){
+		// return level-order traversal of the tree. works well only for small trees with at most 8 nodes
+		// this function might be helpful for debugging
+		
+		Stack<Node> globalStack = new Stack<Node>();
+		globalStack.push(this.root);	
+		int emptyLeaf = 32;
+		boolean isRowEmpty = false;
+
+		String result="";
+		while(isRowEmpty==false)
+		{
+
+			Stack<Node> localStack = new Stack<Node>();
+			isRowEmpty = true;
+			for(int j=0; j<emptyLeaf; j++)
+				result+=' ';
+			while(globalStack.isEmpty()==false)
+			{
+				Node temp = globalStack.pop();
+				if(temp != null)
+				{
+
+					result+="["+temp+" ] ";
+					localStack.push(temp.left);
+					localStack.push(temp.right);
+					if(temp.left != null ||temp.right != null)
+						isRowEmpty = false;
+				}
+				else
+				{
+					result+="--";
+					localStack.push(null);
+					localStack.push(null);
+				}
+				for(int j=0; j<emptyLeaf*2-2; j++)
+					result+=' ';
+			}
+			result+="\n";
+			emptyLeaf /= 2;
+			while(localStack.isEmpty()==false)
+				globalStack.push( localStack.pop() );
+		}
+
+		return result;
+	}
+
+	public boolean checkIfRBPropertySatisfied(){
+		boolean satisfied=true;
+
+		// check if the root is black
+		satisfied=satisfied & (this.root.color==false);
+
+		// check property 4
+		satisfied=satisfied & RBProperty4(root);
+
+		// check property 3
+		satisfied=satisfied & RBProperty3(root);
+
+		return satisfied;
+	}
+
+
+	private boolean RBProperty3(Node node){
+		boolean satisfied=true;
+
+		int leftCount=0;
+		if (node.left!=null) {
+			if (node.left.color==false) {
+				leftCount++;
+			}
+			leftCount+=node.left.getMaxBlackNodes();
+		}
+
+		int rightCount=0;
+		if (node.right!=null) {
+			if (node.right.color==false) {
+				rightCount++;
+			}
+			rightCount+=node.right.getMaxBlackNodes();
+		}
+
+		satisfied=((leftCount-rightCount)==0);
+
+		if (!satisfied) {
+			System.out.println("Left is: "+leftCount+" Right is: "+rightCount);
+		}
+
+		return satisfied;
+	}
+
+	private boolean RBProperty4(Node node){
+		boolean satisfied=true;
+
+		if (node.color==true) {
+			if (node.left!=null) {
+				if (!node.left.color==false) {
+					satisfied=false;
+				}
+			}
+
+			if (node.right!=null) {
+				if (!node.right.color==false) {
+					satisfied=false;
+				}
+			}
+		}
+
+		// recursive calls for left and right subtree
+		if (node.left!=null) {
+			satisfied=satisfied & RBProperty4(node.left);
+		}
+
+		if (node.right!=null) {
+			satisfied=satisfied & RBProperty4(node.right);
+		}
+
+		return satisfied;
+	}
+}

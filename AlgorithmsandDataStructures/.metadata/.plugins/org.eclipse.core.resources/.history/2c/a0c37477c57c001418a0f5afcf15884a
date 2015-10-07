@@ -1,0 +1,60 @@
+package riemannSum;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+
+public class riemannSum {
+
+	public static void main(String[] args) throws ScriptException {
+		Scanner kb = new Scanner(System.in);
+		ScriptEngineManager mgr = new ScriptEngineManager();
+		ScriptEngine engine = mgr.getEngineByName("JavaScript");
+		int a, b, n, changeX, xi, answer = 0;
+		int[] indexesOfX;
+		StringBuilder fx = new StringBuilder();
+		System.out.print("Enter your function with x as the variable seperated by spaces ex.. (1 / x): ");
+		fx.append(kb.nextLine());
+		System.out.println();
+		System.out.print("Enter the the first value of your integral partition... (a) ");
+		a = kb.nextInt();
+		System.out.println();
+		System.out.print("Enter the the second value of your integral partition... (b) ");
+		b = kb.nextInt();
+		System.out.println();
+		n = b - a;
+		changeX = (b - a)/ n;
+		
+		for (int i = 0; i < n; i++) {
+			StringBuilder fxTemp = new StringBuilder();
+			fxTemp.append(fx.toString());
+			xi = a + (i * changeX);
+			indexesOfX = findx(fxTemp.toString());
+			
+			for (int j = 0; j < indexesOfX.length; j++) {
+				fxTemp.delete(j, j);
+				fxTemp.insert(j, Integer.toString(xi));
+			}
+				answer += (int) engine.eval(fxTemp.toString());
+		}
+	}
+	
+	private static int[] findx(String equation) {
+		// assume no more than 50 x's
+		ArrayList indexes = new ArrayList();
+		int counter = 0;
+		for (int i = 0; i < equation.length(); i++) {
+			if (equation.charAt(i) == 'x') 
+				indexes.add(i);
+		}
+	    int[] indexArray = new int[indexes.size()];
+	    
+	    for (int i = 0; i < indexArray.length; i++) {
+	        indexArray[i] = (int) indexes.get(i);
+	    }
+	    return indexArray;
+	}
+}

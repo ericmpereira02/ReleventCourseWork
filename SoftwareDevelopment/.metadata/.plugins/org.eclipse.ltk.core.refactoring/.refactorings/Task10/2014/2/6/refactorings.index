@@ -1,0 +1,6 @@
+1391790548818	Extract constant 'SQUARE_DEPTH'
+1391805852509	Rename method 'recursion'
+1391807687427	Extract constant 'SQUARE_SIZE'
+1391807748717	Extract constant 'THIRD_CHOICE'
+1391807772504	Extract constant 'SECOND_CHOICE'
+1391807789196	Extract constant 'FIRST_CHOICE'

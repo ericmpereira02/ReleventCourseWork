@@ -1,0 +1,47 @@
+package riemannSum;
+
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+
+import net.objecthunter.exp4j.Expression;
+import net.objecthunter.exp4j.ExpressionBuilder;
+
+public class riemannSum {
+
+	public static void main(String[] args){
+		Scanner kb = new Scanner(System.in);
+//		ScriptEngineManager mgr = new ScriptEngineManager();
+//		ScriptEngine engine = mgr.getEngineByName("JavaScript");
+		
+		int a, b, n, changeX, xi, answer = 0;
+//		int[] indexesOfX;
+//		StringBuilder fx = new StringBuilder();
+		System.out.print("Enter your function with x as the variable seperated by spaces ex.. (1 / x): ");
+//		fx.append(kb.nextLine());
+		Expression fx = new ExpressionBuilder(kb.nextLine())
+		.variables("x", "y")
+		.build();
+		System.out.println();
+		System.out.print("Enter the the first value of your integral partition... (a) ");
+		a = kb.nextInt();
+		System.out.println();
+		System.out.print("Enter the the second value of your integral partition... (b) ");
+		b = kb.nextInt();
+		System.out.println();
+		n = b - a;
+		changeX = (b - a)/ n;
+		
+		for (int i = 0; i < n; i++) {
+			xi = a + (i * changeX);
+			fx.setVariable("x", xi);
+				answer += (int) fx.evaluate();
+		}
+		
+		System.out.println(answer);
+	}
+}

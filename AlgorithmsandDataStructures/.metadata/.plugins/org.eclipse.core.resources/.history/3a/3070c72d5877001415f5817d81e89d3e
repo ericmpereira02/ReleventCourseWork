@@ -1,0 +1,27 @@
+
+
+public class CliquePercolation {
+	private Graph g;
+	private  int k;
+
+	private int[] communities;
+
+
+	public void CliquePercolation(Graph G, int k) {
+		this.g = G;
+		this.k = k;
+	}
+	public HashSet<HashSet<Integer>> findCliques(int n){
+		// find all cliques in the graph g of size n.
+		// Hint: use recursion
+	}
+
+
+
+	public int[] findCommunities(){
+		// find all communities using clique perlocation.
+		// result should be an array where each vertex has community ID
+		// two vertices are from the same community if communities[i]==communities[j]
+	}
+
+}

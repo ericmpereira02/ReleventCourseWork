@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class MyStack<T> implements Stack<T> {
+    private int count = 0;
+    T[] ringBuffer;
+
+    @SuppressWarnings({ "unchecked" })
+    public MyStack(int size) {
+
+        ringBuffer = (T[]) new Object[size];
+
+    }
+
+    @Override
+    public boolean isEmpty() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public T pop() throws BufferEmptyException {
+        if (count < 1) {
+            throw new BufferEmptyException();
+        } else {
+            count--;
+            return ringBuffer[count];
+        }
+    }
+
+    @Override
+    public void push(T item) throws BufferFullException {
+        int size = ringBuffer.length - 1;
+        if (count > size) {
+            throw new BufferFullException();
+        } else {
+            count++;
+            ringBuffer[count] = item;
+        }
+    }
+
+    public static void main(final String args[]) {
+        int size = Integer.parseInt(args[0]);
+        Scanner kb = new Scanner(System.in);
+        Stack<Integer> buffer = new MyStack<Integer>(size);
+        while (kb.hasNext()) {
+            String pushOrPop = kb.next();
+            if (pushOrPop.equals("push")) {
+                int n = kb.nextInt();
+                try {
+                    buffer.push(n);
+                    System.out.println("push " + n);
+                } catch (BufferFullException ex) {
+                    System.out.println("Stack is full");
+                }
+            } else {
+                try {
+                    System.out.println("pop " + buffer.pop());
+                } catch (BufferEmptyException ex) {
+                    System.out.println("Stack is empty");
+                }
+            }
+        }
+
+    }
+}

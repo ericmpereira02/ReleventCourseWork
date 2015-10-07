@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract constant &apos;INTERATIONS&apos; from expression &apos;100&apos;&#x0D;&#x0A;- Original project: &apos;Task19&apos;&#x0D;&#x0A;- Constant name: &apos;INTERATIONS&apos;&#x0D;&#x0A;- Constant expression: &apos;100&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Extract constant &apos;INTERATIONS&apos;" flags="786432" id="org.eclipse.jdt.ui.extract.constant" input="/src&lt;{Newton.java" name="INTERATIONS" qualify="false" replace="false" selection="552 3" stamp="1395157052687" version="1.0" visibility="2"/>
+</session>

@@ -1,0 +1,113 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+
+
+
+public class CliquePercolation {
+	private Graph g;
+	private  int k;
+
+	private int[] communities;
+
+	/**
+	 * 
+	 * @param G
+	 * @param k
+	 */
+	public CliquePercolation(Graph G, int k) {
+		this.g = G;
+		this.k = k;
+	}
+	/**
+	 * 
+	 * @param n
+	 * @return
+	 */
+	public HashSet<HashSet<Integer>> findCliques(int n){
+		// find all cliques in the graph g of size n.
+		// Hint: use recursion
+		HashSet<HashSet<Integer>> answer = new HashSet<HashSet<Integer>>();
+		ArrayList<Integer> possible = new ArrayList<Integer>();
+		ArrayList<Integer> candidates = new ArrayList<Integer>();
+		ArrayList<Integer> found = new ArrayList<Integer>();
+		for (int i = 0; i < g.V(); i++) {
+			candidates.add(i);
+		}
+		findCliquesRecursion(answer, possible, candidates, found, n);
+		return answer;
+	}
+
+
+	/**
+	 * 
+	 * @param answer cliques to return
+	 * @param possible possible node for clique
+	 * @param candidates candidates for clique
+	 * @param found found node for clique
+	 * @param n
+	 */
+	private void findCliquesRecursion(HashSet<HashSet<Integer>> answer, ArrayList<Integer> possible,
+			ArrayList<Integer> candidates, ArrayList<Integer> found, int n) {
+		ArrayList<Integer> arrayCandidates = new ArrayList<Integer>(candidates);
+		boolean stop = false;
+		int counter;
+		for (int alreadyFound: found) {
+			counter = 0;
+			for (int candidate: candidates) {
+				if (this.g.containsEdge(alreadyFound, candidate))
+					counter++;
+			}
+			if (counter == candidates.size()) {
+				stop = true;
+			}
+				
+		}
+		if (!stop) {
+			for (int candidate: arrayCandidates) {
+				ArrayList<Integer> candidates2 = new ArrayList<Integer>();
+				ArrayList<Integer> found2 = new ArrayList<Integer>();
+				possible.add(candidate);
+				for (int i = 0; i < candidates.size(); i++) {
+					if (candidates.get(i) == candidate)
+						candidates.remove(i);
+				}
+				
+				for (int newCan: candidates) {
+					if (g.containsEdge(candidate, newCan))
+						candidates2.add(newCan);
+				}
+				
+				for (int newFound: found) {
+					if(g.containsEdge(candidate, newFound))
+						found2.add(newFound);
+				}
+				
+				if(candidates2.isEmpty() && found2.isEmpty() && possible.size() == n)
+					answer.add(new HashSet<Integer>(possible));
+				else {
+					findCliquesRecursion(answer, possible, candidates2, found2, n);
+				}
+				found.add(candidate);
+				for (int i = 0; i < possible.size(); i++) {
+					if (possible.get(i) == candidate)
+						possible.remove(i);
+				}
+			}
+		}
+		
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public int[] findCommunities(){
+		// find all communities using clique perlocation.
+		// result should be an array where each vertex has community ID
+		// two vertices are from the same community if communities[i]==communities[j]
+		HashSet<HashSet<Integer>> cliques = findCliques(k);
+		int[] answer = new int[cliques.size()];
+		return answer;
+	}
+
+}

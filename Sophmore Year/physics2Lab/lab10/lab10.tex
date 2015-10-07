@@ -1,0 +1,143 @@
+%Lab 10 MAgnetic Induciton
+
+\documentclass{article}
+\usepackage{setspace}
+\usepackage[margin = 1in]{geometry}
+\usepackage{graphicx}
+\graphicspath{ {/home/ahaggard/Pictures/} }
+%---------------------------------------------------------------------------
+%	TITLE SECTION
+%---------------------------------------------------------------------------
+\title{Experiment 10 \\ Magnetic Induction}
+\author{by \\ Austin Haggard}
+
+\date{
+	Experiment Performed: Aug 8th \\
+	Report Submitted: Aug 15th \\[11pt]
+	Lab Partner: \\ Chris Golus \\ Tariq Alamri \\[11pt] 
+	GSA: \\ C. Monroe
+}
+%---------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\section*{Introduction:}
+\setcounter{page}{1}
+%---------------------------------------------------------------------------
+%	INTRODUCTION... What we are measuring and what we are comparing it too 	/ dont use first person / audience is another student
+%---------------------------------------------------------------------------
+In this experiment we use coils to help understand Faraday's and Lorentz's Laws.  We then find an experimental time constant of an R-L circuit the same way that we did in an earlier experiment.  This value is then compared to a theoretical value that is read from the oscilloscope.
+%---------------------------------------------------------------------------
+\newpage
+
+%---------------------------------------------------------------------------
+%	DATA
+%---------------------------------------------------------------------------
+%	On a seperate page normally
+%---------------------------------------------------------------------------
+
+\section*{Data Analysis:}
+\setcounter{page}{3}
+%---------------------------------------------------------------------------
+%	DATA ANALYSIS.. All equations used
+%---------------------------------------------------------------------------
+For part three of this experiment we first had to calculate the theoretical time constant.  To do this we will sue the equation below:
+\[T = \frac{L}{R}\]
+\[\frac{.035}{1000} = .000035\]
+\\
+Then errors were propagated for part three by using the following equation:
+\[\sqrt{\frac{\sigma^2_x}{y^2} + \frac{x^2\sigma^2_y}{y^4}}\]
+\[\sqrt{\frac{3.5}{1000}^2+\frac{35^2*10^2}{1000^4}} = .003517\]
+\\
+the difference is found using the equation below:
+\[Experiemntal - Theoretical\]
+\[.0005 - .000035 = .000465\]
+\\
+Then sigma D is found using the following equation
+\[\sqrt{\sum{E^2}}\]
+\[\sqrt{.003517^2 + .003517^2} = .00704\]
+\\
+In part four of the lab we had to calculate frequency.  We did this by using the following equation.
+\[\frac{1}{period}\]
+\[\frac{1}{.00022} = 4545.46\]
+
+We then calculated our experimental angular frequency.  We did this by using the following equation.
+\[frequency * 2 * \pi\]
+\[4545.46 * 2 * \pi = 28559.93\]
+\\
+We then need to calculate the theoretical value which is found using the following equation:
+\[\sqrt{\frac{1}{LC}}\]
+\[\sqrt{\frac{1}{.035 * 4.7*10^{-8}}}=24655.68\]
+\\
+Last we need to find percent difference by using the following equation:
+\[\frac{d}{F_t}*100\]
+\[\frac{3904.25}{24655.68} = 15\%\]
+
+\begin{figure}[h]
+\caption{}
+\centering
+\includegraphics[scale = .050]{IMG_3048}
+\end{figure}
+
+\begin{figure}[h]
+\caption{derivative}
+\centering
+\includegraphics[scale = .050]{IMG_3049}
+\end{figure}
+
+\begin{figure}[h!]
+\caption{damped}
+\centering
+\includegraphics[scale = .050]{IMG_3050}
+\end{figure}
+
+%---------------------------------------------------------------------------
+\newpage
+\section*{Table of Results:}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+%--------------------------------------------------------------------------
+%	TABLE OF RESULTS
+%--------------------------------------------------------------------------
+	Experimental: .0005 28559.9 & Theoretical: 3.5E-5 24655.7 \\ \hline
+	Discrepancy: 4.7E-4 3904.2   & Percent Difference: N/A \\
+%---------------------------------------------------------------------------
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Discussion:}
+\doublespace
+%---------------------------------------------------------------------------
+%	DISCUSSION
+%---------------------------------------------------------------------------
+%---------------------------------------------------------------------------
+%	short paragraph on physics of the experiment
+%---------------------------------------------------------------------------
+In this experiment the first thing that was done was in class demonstrations.The first demonstration was having a piece of metal being dropped between two strong magnets and seeing how the breaking is affected.  We then saw an electromagnetic cannon and also dropping a magnet through a long tube.  it was noted that a magnet takes much longer than a normal piece of metal.
+
+In the first part of part 2 of this lab you can see that the galvanometer jumps up into positive values, falls into the negative, then falls back to zero.  This is because the current is only created while the magnets are moving.  In part 2 of this portion of the lab when we put the two coils face to face we can see that the general shape of this wave is an imperfect square wave.  This is related to a triangle wave because the peaks line up in the same fashion.  In part three of this experiment our d was much less than sigma d meaning this experiment was a success.  Errors that occurred in this part of the lab were the built in errors of the equipment used.  This type of error would be intrinsic random error because it is built into the lab. This could effect the result in either a positive or negative manner because we can't tell which way the error is skewed for each piece of equipment.  Part four of this lab we found the angular frequency and compared it to the theoretical value that we also calculated.  Our oscillations were damped and our percent error was pretty decent.  The largest error in this lad would be the random errors caused.
+%---------------------------------------------------------------------------
+%	SOURCES OF EXPERIMENTAL ERROR TO OCCUR ie.. each category, 			 		random\intrinsic and how they effected the results, and which error is 	the largest
+%---------------------------------------------------------------------------
+  
+  
+%---------------------------------------------------------------------------
+%	State wether it was a success / compare theoreticle and experiemntal.  	Explain discrepencies larger than normal
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+\singlespace
+\newpage
+
+\section*{Conclusion:}
+%---------------------------------------------------------------------------
+%	CONCLUSION... two sentences summerize experiment.  State whether it 			was a success and compare experimental / theoretical results.
+%---------------------------------------------------------------------------
+In this lab we learned about Faraday's law, Lorentz's law, calculated a time constant, and also calculated angular frequency. Overall this lab was successful.  Our d was less than sigma d in part three and we had a small percent difference in part 4.  The majority of our errors came from random intrinsic errors from using the equipment.
+%--------------------------------------------------------------------------
+\end{document}

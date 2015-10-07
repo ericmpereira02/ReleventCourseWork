@@ -1,0 +1,123 @@
+%Lab 11
+%R-L-C Circuit
+
+\documentclass{article}
+\usepackage{setspace}
+\usepackage[margin = 1in]{geometry}
+%---------------------------------------------------------------------------
+%	TITLE SECTION
+%---------------------------------------------------------------------------
+\title{Experiment 11 \\ The R-L-C Circuit}
+\author{by \\ Austin Haggard}
+
+\date{
+	Experiment Performed: April 15th \\
+	Report Submitted: April 22nd \\[11pt]
+	Lab Partner: \\ Steve Kalinganire \\ Mohit Chandiramani \\[11pt] 
+	GSA: \\ C. Monroe
+}
+%---------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\section*{Introduction:}
+\setcounter{page}{1}
+%---------------------------------------------------------------------------
+%	INTRODUCTION... What we are measuring and what we are comparing it too 	/ dont use first person / audience is another student
+%---------------------------------------------------------------------------
+In this experiment we measured the voltage across different parts of an R-L-C circuit.  We the observed how the frequency effects, and is effected, by other parts of the circuit.  Some of this information was put into graphs to see its effects visually.  We then calculated both the experimental and theoretical values of angular frequency and compared them.
+%---------------------------------------------------------------------------
+\newpage
+
+%---------------------------------------------------------------------------
+%	DATA
+%---------------------------------------------------------------------------
+%	On a seperate page normally
+%---------------------------------------------------------------------------
+
+\section*{Data Analysis:}
+\setcounter{page}{3}
+%---------------------------------------------------------------------------
+%	DATA ANALYSIS.. All equations used
+%---------------------------------------------------------------------------
+The first thing calculated in this experiment is the experimental angular frequency.  It is done using the following equation below:
+\[\sqrt{\frac{1}{LC}}=F_e\]
+\[\sqrt{\frac{1}{.05*1*10^{-8}}}=4471.35\]
+\\
+We also need to calculate the linear frequency using the following equation:
+\[\frac{F_e}{2*\pi}=F_l\]
+\[\frac{44721.4}{2*\pi}=7117.6\]
+\\
+We can now calculate the experimental value of the angular frequency using the resonant frequency that was previously found.  Sample calculation below:
+\[2*\pi*F_r = R_t\]
+\[2*\pi*592=3719.65\]
+\\
+Next we can calculate the current used when taking samples of frequency used for graphing.  We will use the following equation.
+\[\frac{V_r}{F_l	} = \textit{I}\]
+\[\frac{.397}{7870}=5.04*10^{-5}\]
+\\
+With this information we can now calculate XL.
+\[\frac{V_i}{\textit{I}} = X_L\]
+\[\frac{.0078}{5.04*10^{-5}}=154.62\]
+\\
+Then errors were propagated by using the following equation:
+\[\sqrt{(\%\sigma^2_x)^2+(\%\sigma^2_y)^2}=\%\sigma\]
+\[\sqrt{200}= 14.14\%\]
+\\
+the difference is found using the equation below:
+\[Experiemntal - Theoretical\]
+\[44721.36 - 3719.65 = 41001.71\]
+\\
+Then sigma D is found using the following equation
+\[\sqrt{\sum{E^2}}\]
+\[14.14+\sqrt{100} = 24.14\]
+\\
+%---------------------------------------------------------------------------
+\newpage
+
+\section*{Table of Results:}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+%--------------------------------------------------------------------------
+%	TABLE OF RESULTS
+%--------------------------------------------------------------------------
+	Experimental: 44721.36 & Theoretical: 3719.65  \\ \hline
+	Discrepancy: 41001.71   & Percent Difference: 14.14\% \\
+%---------------------------------------------------------------------------
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Discussion:}
+\doublespace
+%---------------------------------------------------------------------------
+%	DISCUSSION
+%---------------------------------------------------------------------------
+%---------------------------------------------------------------------------
+%	short paragraph on physics of the experiment
+%---------------------------------------------------------------------------
+In this experiment we first built an L-R-C circuit.  We then made a few changes to things such as frequency.  When frequency changes the amplitude of Vr stays the same.  Although the phase of Vr has an increase in period.  When we reach the resonance frequency we see that Vr is about the same as V0 but V0 is slightly greater.  According to theory when we record the maximum on the fitted curve it is consider the resonance frequency.  When we view the slope of our Xl vs w graph it represents the inductance.  In the end of this experiment we found the experimental and theoretical value of the angular frequency and compared them.  the errors in this experiment were given to us as plus or minus 10\% for L and C.  These are systematic intrinsic errors because these errors will always be the same when using this circuit.  If we were to look at the error of the slope it would fall into random errors in measurement.  This is because we took the measurement ourselves and it could easily be skewed in a positive or negative direction.  Our experiment would be considered a failure.  Our d is much greater than our sigma d resulting in a failure.  This was expected as the previous lab group had similar issues which we believe is due to the equipment at our table.
+%---------------------------------------------------------------------------
+%	SOURCES OF EXPERIMENTAL ERROR TO OCCUR ie.. each category, 			 		random\intrinsic and how they effected the results, and which error is 	the largest
+%---------------------------------------------------------------------------
+  
+  
+%---------------------------------------------------------------------------
+%	State wether it was a success / compare theoreticle and experiemntal.  	Explain discrepencies larger than normal
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+\singlespace
+\newpage
+
+\section*{Conclusion:}
+%---------------------------------------------------------------------------
+%	CONCLUSION... two sentences summerize experiment.  State whether it 			was a success and compare experimental / theoretical results.
+%---------------------------------------------------------------------------
+In conclusion, we built an R-L-C circuit then calculated the theoretical and experimental angular frequency.  We also created two graphs, one showing a curve and one that was supposed to come out linear.  These graphs were built on varying frequency.  Our experiment was a failure with a much larger d than sigma d.  We could see this coming from the beginning since our equipment was deemed unreliable by the previous lab group.
+%--------------------------------------------------------------------------
+\end{document}

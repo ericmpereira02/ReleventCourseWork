@@ -1,0 +1,162 @@
+\documentclass{article}
+\usepackage{setspace}
+\usepackage[margin = 1in]{geometry}
+\usepackage{graphicx}
+\graphicspath{ {/home/ahaggard/Pictures/} }
+\begin{document}
+\begin{flushright}
+Austin Haggard
+\end{flushright}
+Binom 1 (n = 10)
+\[E(x) = np = 10 * .4 = 4\]
+\[\sigma = \sqrt{npq} = \sqrt{10 * .4 * (1-.4)} = 1.55\]
+Binom 2 (n = 20)
+\[E(x) = 20 * .4 = 8\]
+\[\sigma = \sqrt{20 * .4*(1 - .4)} = 2.19\]
+Binom 3 (n = 25)
+\[E(x) = 25 * .4 = 10\]
+\[\sigma = \sqrt{25*.4*(1-.4)}= 2.45\]
+Binom 4 (n = 100)
+\[E(x) = 100 * .4 = 40\]
+\[\sigma = \sqrt{100 * .4*(1-.4)}=4.9\]
+
+
+Below is the chart comparing binomial and normal approximation percentiles, to obtain these values I used the quantile function in R.  I will provide a sample snip of code below.
+\[quantile(dbinom(0:10,10,.4), c(.05,.10,.25,.50,.75,.90,.95)\]
+\\
+I then used the same function using dnorm with a sequence increasing by .01 to find the normal approximation. On the next few pages are graphs comparing these two distributions and below that I will include a discussion.
+\begin{center}
+\begin{tabular}{|l|l|c|c|c|c|c|c|}
+\hline
+Percentile & 
+
+5\textsuperscript{th} & 
+10\textsuperscript{th} &
+25\textsuperscript{th} &
+50\textsuperscript{th} &
+75\textsuperscript{th} &
+90\textsuperscript{th} &
+95\textsuperscript{th} \\
+\hline
+
+Binomial 1 &
+.0008 &
+.0016 &
+.0083 &
+.0425 &
+.1608 &
+.2150 &
+.2329 \\
+\hline
+Normal Aprox 1 &
+.0005 &
+.0014 &
+.0138 &
+.0701 &
+.1859 &
+.2443 &
+.2541 \\
+\hline
+
+Binomial 2 &
+3.299E-7 &
+4.7E-6   &
+2.697E-4 &
+1.235E-2 &
+7.465E-2 &
+1.597E-1 &
+1.659E-1 \\
+\hline
+
+Normal Aprox 2 &
+6.055E-7 &
+5.406E-6 &
+5.173E-4 &
+1.345E-2 &
+9.495E-2 &
+1.641E-1 &
+1.775E-1 \\
+\hline
+
+Binomial 3 &
+2.217E-8 &
+4.750E-7 &
+4.591E-5 &
+5.113E-3 &
+6.803E-2 &
+1.332E-1 &
+1.500E-1 \\
+\hline
+
+Normal Aprox 3 &
+2.356E-8 &
+3.624E-7 &
+1.069E-4 &
+6.289E-3 &
+7.200E-2 &
+1.430E-1 &
+1.580E-1 \\
+\hline
+
+Binomial 4 &
+9.187E-32 &
+1.604E-25 &
+2.864E-16 &
+9.059E-8  &
+2.563E-3  &
+4.781E-2  &
+6.820E-2  \\
+\hline
+
+Normal Aprox 4 &
+3.569E-29 &
+1.000E-24 &
+1.558E-14 &
+1.812E-7  &
+3.145E-3  &
+4.837E-2  &
+7.148E-2  \\
+\hline
+
+
+\end{tabular}
+\end{center}
+
+\newpage
+
+\begin{figure}[h]
+\includegraphics[scale=.35]{Selection_001}
+\centering
+\caption{Binomial 1 (dots) vs Normal Approximation}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=.35]{Selection_002}
+\centering
+\caption{Binomial 2 (dots) vs Normal Approximation}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+\includegraphics[scale=.35]{Selection_003}
+\centering
+\caption{Binomial 3 (dots) vs Normal Approximation}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[scale=.35]{Selection_004}
+\centering
+\caption{Binomial 4 (dots) vs Normal Approximation}
+\end{figure}
+
+\newpage
+\doublespace
+When approximating binomial distributions you can tell if the approximation can be safely applied by using the following rule.
+\[nq \geq 10\ \&\ np \geq 10\]
+
+When making initial calculations on the first page we can already see that the first two approximation have an np that is less than 10. Now we can calculate nq for the second and third case to see if we will get an accurate approximation.
+\[binom 3\ 25 * .6 = 15\ \& \ binom 4\ 100 * .6 = 60\]
+
+This means that the third and fourth binomial should be able to provide accurate normal approximations.  From the table we can see that these values are much closer together than the first and second approximation.  You can also see from the figures above how much different the actual distribution and the approximate distribution are.  Figure one is by far the most inaccurate approximation.  The second and third figure are very similar because of how close their n values were.  Binomial 2 provided a value that was just under the allowed value of ten for np.  By looking at the graph it seems like it is still a decent approximation even though it is not within the standards.  Figure 4 shows that the approximation is much more accurate than the other three approximations.  With this information we can easily conclude that the larger np and nq are, the more accurate of a normal approximation we receive.  This also applies inversely meaning the smaller np and nq are the less accurate the approximation is.
+\end{document}

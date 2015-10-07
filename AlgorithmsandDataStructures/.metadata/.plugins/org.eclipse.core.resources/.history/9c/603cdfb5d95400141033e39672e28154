@@ -1,0 +1,42 @@
+public class Merge_Sort {
+	static void mergesort(int list[], int first, int last) {
+		if (first >= last)
+			// Nothing to sort
+			return;
+		int m = (first + last) / 2;
+		// calculate the middle of the list
+		// Recursively call the two partitions
+		mergesort(list, first, m);
+		mergesort(list, m + 1, last);
+		merge(list, first, m, last);
+	}
+
+	void merge (int[] list, int first, int m, int last) {
+		int i, j = 0;
+		int[] aux = new int[list.length];
+		for (i = m + 1; i > first; i--) {
+			aux[i-1] = list[i-1];
+		}
+		for (j = m; j < last; j++) {
+			aux[last + m - j] = list[j + 1];
+		}
+		for (int k = first; k <= last; k++) {
+			if (aux[j] < aux[i])
+				list[k] = aux[j--];
+			else
+				list[k] = aux[i++];
+			
+		}
+	}
+	
+	public static void main(String[] args) {
+		int[] array = {1 ,6, 5, 8, 32, 98, 12, 34, 56};
+		mergesort(array, 0, array.length - 1);
+		
+		for(int num: array) {
+			System.out.print(num + ",");
+		}
+}
+}
+
+// Worst Case/ Best Case = O(n log n)

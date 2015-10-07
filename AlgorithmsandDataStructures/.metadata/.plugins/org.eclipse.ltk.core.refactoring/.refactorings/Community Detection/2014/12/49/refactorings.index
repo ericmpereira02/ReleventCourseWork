@@ -1,0 +1,8 @@
+1417569190922	Delete element
+1417631413563	Rename local variable 'result'
+1417631444031	Rename method 'getCliques'
+1417631487661	Rename local variable 'prevClique'
+1417631497640	Rename method 'makeLargerClique'
+1417631503809	Rename local variable 'clique'
+1417631515340	Rename local variable 'largerClique'
+1417631545709	Rename method 'getCliquesOfSizeTwo'

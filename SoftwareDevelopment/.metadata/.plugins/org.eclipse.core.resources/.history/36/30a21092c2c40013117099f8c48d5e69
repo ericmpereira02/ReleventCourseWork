@@ -1,0 +1,71 @@
+import java.util.Scanner;
+
+
+public class MyQueue<T> implements Queue<T> {
+    T[] ringBuffer;
+    int count = 0;
+    int front = 0;
+    @SuppressWarnings({ "unchecked" })
+    public MyQueue(final int size) {
+        ringBuffer = (T[]) new Object[size];
+    }
+    
+    @Override
+    public boolean isEmpty() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public T dequeue() throws BufferEmptyException {
+        T ans;
+        if (count < 1) {
+            throw new BufferEmptyException();
+        } else {
+            count--;
+            ans = ringBuffer[front];
+            front++;
+            return ans;
+        }
+    }
+
+    @Override
+    public void enqueue(T item) throws BufferFullException {
+        final int size = ringBuffer.length - 1;
+        if (count > size) {
+            throw new BufferFullException();
+        } else {
+            ringBuffer[count] = item;
+            count++;
+            if (front > 0) {
+            front--;    
+            }
+        }
+        
+    }
+    
+    public static void main(final String args[]) {
+        final int size = Integer.parseInt(args[0]);
+        Scanner kb = new Scanner(System.in);
+        Queue<Integer> buffer = new MyQueue<Integer>(size);
+        while (kb.hasNext()) {
+            final String enqOrDeq = kb.next();
+            if (enqOrDeq.equals("enqueue")) {
+                final int n = kb.nextInt();
+                try {
+                    buffer.enqueue(n);
+                    System.out.println("enqueue " + n);
+                } catch (final BufferFullException ex) {
+                    System.out.println("Queue is full");
+               }
+            } else { 
+                try {
+                    System.out.println("Dequeue " + buffer.dequeue());
+                } catch (final BufferEmptyException ex) {
+                    System.out.println("Queue is empty");
+                }
+            }
+        }
+    }
+
+}

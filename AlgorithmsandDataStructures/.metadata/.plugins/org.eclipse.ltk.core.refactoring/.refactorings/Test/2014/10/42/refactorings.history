@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;B&apos; in &apos;test.CountingSort(...)&apos; to &apos;C&apos;&#x0D;&#x0A;- Original project: &apos;Test&apos;&#x0D;&#x0A;- Original element: &apos;test.CountingSort(int[], int).B&apos;&#x0D;&#x0A;- Renamed element: &apos;B&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;B&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{test.java[test~CountingSort~\[I~I@B!380!407!386!386!\[I!0!false" name="C" references="true" stamp="1413405746807" version="1.0"/>
+</session>

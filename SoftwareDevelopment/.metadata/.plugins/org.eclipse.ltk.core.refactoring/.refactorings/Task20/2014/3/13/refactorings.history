@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract constant &apos;ACCURACY_OF_TEST&apos; from expression &apos;25&apos;&#x0D;&#x0A;- Original project: &apos;Task20&apos;&#x0D;&#x0A;- Constant name: &apos;ACCURACY_OF_TEST&apos;&#x0D;&#x0A;- Constant expression: &apos;25&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Extract constant &apos;ACCURACY_OF_TEST&apos;" flags="786432" id="org.eclipse.jdt.ui.extract.constant" input="/src&lt;{SortTest.java" name="ACCURACY_OF_TEST" qualify="false" replace="false" selection="906 2" stamp="1395937885636" version="1.0" visibility="2"/>
+</session>

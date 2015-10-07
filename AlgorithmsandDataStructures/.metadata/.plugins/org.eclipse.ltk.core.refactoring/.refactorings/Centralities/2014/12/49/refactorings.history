@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;ErdosRenyi.java&apos; to &apos;Community Detection/src&apos;&#x0D;&#x0A;- Original project: &apos;Centralities&apos;&#x0D;&#x0A;- Destination element: &apos;Community Detection/src&apos;&#x0D;&#x0A;- Original element: &apos;ErdosRenyi.java&apos;" description="Copy compilation unit" destination="=Community Detection/src" element1="/src&lt;{ErdosRenyi.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1417569386014" units="1" version="1.0"/>
+</session>

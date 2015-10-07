@@ -1,0 +1,45 @@
+import java.awt.Color;
+
+
+public class Newton {
+
+    public static Color pixColor(Complex number) {
+        double range = 0.001;
+        Complex four = new Complex (4, 0);
+        Complex white = new Complex(1, 0);
+        Complex red = new Complex(-1, 0);
+        Complex blue = new Complex(0, 1);
+        Complex green = new Complex(0, -1);
+        
+        for (int i = 0; i < 100; i++) {
+            Complex z  = number.times(number).times(number).times(number).minus(white);
+            Complex zDeriv = four.times(number).times(number).times(number);
+            number = number.minus(z.divides(zDeriv));
+            if (number.minus(white).abs() <= range) return StdDraw.WHITE;
+            if (number.minus(red).abs() <= range) return StdDraw.RED;
+            if (number.minus(blue).abs() <= range) return StdDraw.BLUE;
+            if (number.minus(green).abs() <= range) return StdDraw.GREEN;
+        }  
+        return StdDraw.BLACK;
+    }
+    
+    public static void main (final String args[]) {
+        int pix = Integer.parseInt(args[0]);
+        double min = -1;
+        double max = 1;
+        double size = 2;
+        
+        StdDraw.setCanvasSize(pix, pix);
+        StdDraw.setXscale(min, max);
+        StdDraw.setYscale(min, max);
+        for (int i = 0; i < pix; i++) {
+           for (int e = 0; e < pix; e++) {
+               double x = min + i * size / pix;
+               double y = min + e * size / pix;
+               Complex number = new Complex(x,y);
+              pixColor(number);
+              StdDraw.point(x, y);
+           }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+public class SierpinskiTriangles {
+    
+    public static void drawTriangle(double x1, double x2, double x3, double y1, double y2) {
+        StdDraw.line(x1, y1, x3, y1);
+        StdDraw.line(x3, y1, x2, y2);
+        StdDraw.line(x2, y2, x1, y1);
+        /*
+        StdDraw.line(.5, 0, 1, 0);
+        StdDraw.line(1, 0, .75, .5);
+        StdDraw.line(.75, .5, .5, 0);
+        
+        StdDraw.line(.75, 0, 1, 0);
+        StdDraw.line(1, 0, .875, .25);
+        StdDraw.line(.875, .25, .75, 0);
+        
+        StdDraw.line(.875, 0, 1, 0);
+        StdDraw.line(1, 0, .9375, .125);
+        StdDraw.line(.9375, .125, .875, 0);
+        */
+        StdDraw.show();
+    }
+        
+    
+     public static void draw(int depth, double x1, double x2, double x3, double y1, double y2) {
+         if (depth == -1) {
+             return;
+         }
+         drawTriangle(x1, x2, x3, y1, y2);
+         draw(depth - 1, x1, x2 / 2, x3 / 2, y1, y2 / 2);
+         draw(depth - 1, (x1 / 2) + .5, .5 + (x2 / 2), x3, y1, y2 / 2);
+     }
+
+    public static void main (String[] args) {
+        
+        final int depth = Integer.parseInt(args[0]);
+        double x1 = 0, x2 = 0.5, x3 = 1, y1 = 0, y2 = 1;
+        
+        draw(depth, x1, x2, x3, y1, y2);        
+    }
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract constant &apos;ZERO&apos; from expression &apos;0&apos;&#x0D;&#x0A;- Original project: &apos;Task14&apos;&#x0D;&#x0A;- Constant name: &apos;ZERO&apos;&#x0D;&#x0A;- Constant expression: &apos;0&apos;&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Extract constant &apos;ZERO&apos;" flags="786432" id="org.eclipse.jdt.ui.extract.constant" input="/src&lt;{Mortgage.java" name="ZERO" qualify="false" replace="false" selection="563 1" stamp="1392908890092" version="1.0" visibility="2"/>
+</session>

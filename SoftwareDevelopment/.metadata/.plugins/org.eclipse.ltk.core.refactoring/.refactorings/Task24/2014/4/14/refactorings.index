@@ -1,0 +1,7 @@
+1396535327885	Extract constant 'SAMPLE_RATE'
+1396538545109	Extract constant 'ENERGY_DECAY'
+1396539842221	Rename local variable 'CONCERT_A'
+1396543540377	Extract constant 'TWELVE'
+1396543557596	Rename local variable 'FREQUENCY'
+1396543594311	Extract constant 'HALF'
+1396543697331	Rename local variable 'N'

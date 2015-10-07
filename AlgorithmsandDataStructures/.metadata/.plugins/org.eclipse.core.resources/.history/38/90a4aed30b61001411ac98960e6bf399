@@ -1,0 +1,312 @@
+
+import java.util.Stack;
+
+public  class RedBlackTree<Key extends Comparable<Key>>{
+
+
+	private static final boolean RED = true;
+	private static final boolean BLACK = false;
+	private Node root;	 // pointer to the root
+
+	private class Node{
+
+		Node parent;
+		Node left;
+		Node right;
+		Key key;
+
+		boolean color;  // true - red, false - black
+
+
+		Node(Key key_){
+			this.key=key_;
+			this.parent = null;
+			this.left = null;
+			this.right = null;
+		}
+
+		public int getMaxBlackNodes(){
+			// calculate maximum number of the black nodes on the path to the leaf
+
+			int leftCount=0,rightCount=0;
+
+			if (this.left!=null) {
+				if (this.left.color==false) {
+					leftCount+=1;
+				}
+				leftCount+=this.left.getMaxBlackNodes();
+			}
+
+			if (this.right!=null) {
+				if (this.right.color==false) {
+					rightCount+=1;
+				}
+				rightCount+=this.right.getMaxBlackNodes();
+			}
+
+
+			return Math.max(leftCount, rightCount);
+		}
+
+		public Key getKey(){
+			return key;
+		}
+
+		public String toString(){
+			String result="";
+			if (color) {
+				result+=key.toString()+"_r";
+			}else{
+				result+=key.toString()+"_b";
+			}
+			return result;
+		}
+
+
+	}
+
+	private void leftRotate(Node temp) { //rotate node left
+		Node temp1 = temp.left;
+		temp.left = temp.parent;
+		temp.parent = temp.parent.parent;
+		temp.left.right = temp1;
+		if (temp.parent == null)
+			this.root = temp;
+	}
+	
+	private void rightRotate(Node temp) { //rotate node right
+		Node temp1 = temp.right;
+		temp.right = temp.parent;
+		temp.parent = temp.parent.parent;
+		temp.right.left = temp1;
+		if(temp.parent == null) 
+			this.root = temp;
+	}
+	
+	private void case1Left(Node temp) { //reassigns color in the instance of case 1 left
+			temp.parent.color = BLACK;
+			temp.parent.parent.right.color = BLACK;
+			temp.parent.parent.color = RED;
+			temp = temp.parent.parent;
+	}
+	
+	private void case1Right(Node temp) { //reassigns color in the instance of case 1 right
+		temp.parent.color = BLACK;
+		temp.parent.parent.left.color = BLACK;
+		temp.parent.parent.color = RED;
+		temp = temp.parent.parent;
+}
+	
+	private void case2(Node temp) { //rotate left in instance of case 2
+		temp = temp.parent;
+		leftRotate(temp);
+	}
+	
+	private void case3(Node temp) { //rotate right in the instance of case 3
+		temp.parent.color = BLACK;
+		temp.parent.parent.color = RED;
+		rightRotate(temp.parent.parent);
+	}
+	
+	private boolean checkColor(Node temp) { //checks color to be able to include NIL
+		
+		try {
+			temp.color = temp.color;
+		} catch (NullPointerException e) {
+			return BLACK;
+		}
+		return temp.color;
+	}
+	
+	public void insert(Key key) {
+		// insert key into the tree
+		boolean isBlack;
+		Node temp = new Node(key);
+		if (this.root == null) { //if tree is empty
+			this.root = temp;
+			this.root.color = BLACK;
+			return;
+		}
+		temp.color = RED;
+		Node finder = this.root;
+		while (true) {
+			if (temp.key.compareTo(finder.key) < 0) {
+				if (finder.left == null) {
+					finder.left = temp;
+					break;
+				}
+				else finder = finder.left;
+			}
+			else if(temp.key.compareTo(finder.key) > 0) {
+				if (finder.right == null) {
+					finder.right = temp;
+					break;
+				}
+				else finder = finder.right;
+			}
+		}
+		temp.parent = finder;
+		if (temp.parent.color == BLACK) { //if parent is black no need to check
+			return;
+		}
+		
+		else if (checkColor(temp.parent.parent.right) == RED
+				&& temp.parent.left == temp) { // if uncle is red and temp is a
+												// left node
+			case1Left(temp);
+		}
+		else if (checkColor(temp.parent.parent.left) == RED
+				&& temp.parent.right == temp) { // if uncle is red and temp is a
+												// left node
+			case1Right(temp);
+		}
+		else if ( checkColor(temp.parent.left) == BLACK && temp.parent.right == temp) {
+			case2(temp);
+		}
+		else if (checkColor(temp.parent.right) == BLACK && temp.parent.left == temp) {
+			temp.parent.color = BLACK;
+			temp.parent.parent.color = RED;
+			rightRotate(temp.parent.parent);
+		}
+		
+		this.root.color = BLACK; //root is always black
+	}
+
+	public void delete(Key key) {
+		// delete key from the 
+	}
+
+	public Key findMinimum() {
+		// find minimum
+	}
+
+	public Key findMaximum() {
+		// find maximum
+	}
+
+	public String inorderTreeWalk() {
+
+		// return string representing inorder tree walk
+	}
+
+	
+	public String toString(){
+		// return level-order traversal of the tree. works well only for small trees with at most 8 nodes
+		// this function might be helpful for debugging
+		
+		Stack<Node> globalStack = new Stack<Node>();
+		globalStack.push(this.root);	
+		int emptyLeaf = 32;
+		boolean isRowEmpty = false;
+
+		String result="";
+		while(isRowEmpty==false)
+		{
+
+			Stack<Node> localStack = new Stack<Node>();
+			isRowEmpty = true;
+			for(int j=0; j<emptyLeaf; j++)
+				result+=' ';
+			while(globalStack.isEmpty()==false)
+			{
+				Node temp = globalStack.pop();
+				if(temp != null)
+				{
+
+					result+="["+temp+" ] ";
+					localStack.push(temp.left);
+					localStack.push(temp.right);
+					if(temp.left != null ||temp.right != null)
+						isRowEmpty = false;
+				}
+				else
+				{
+					result+="--";
+					localStack.push(null);
+					localStack.push(null);
+				}
+				for(int j=0; j<emptyLeaf*2-2; j++)
+					result+=' ';
+			}
+			result+="\n";
+			emptyLeaf /= 2;
+			while(localStack.isEmpty()==false)
+				globalStack.push( localStack.pop() );
+		}
+
+		return result;
+	}
+
+	public boolean checkIfRBPropertySatisfied(){
+		boolean satisfied=true;
+
+		// check if the root is black
+		satisfied=satisfied & (this.root.color==false);
+
+		// check property 4
+		satisfied=satisfied & RBProperty4(root);
+
+		// check property 3
+		satisfied=satisfied & RBProperty3(root);
+
+		return satisfied;
+	}
+
+
+	private boolean RBProperty3(Node node){
+		boolean satisfied=true;
+
+		int leftCount=0;
+		if (node.left!=null) {
+			if (node.left.color==false) {
+				leftCount++;
+			}
+			leftCount+=node.left.getMaxBlackNodes();
+		}
+
+		int rightCount=0;
+		if (node.right!=null) {
+			if (node.right.color==false) {
+				rightCount++;
+			}
+			rightCount+=node.right.getMaxBlackNodes();
+		}
+
+		satisfied=((leftCount-rightCount)==0);
+
+		if (!satisfied) {
+			System.out.println("Left is: "+leftCount+" Right is: "+rightCount);
+		}
+
+		return satisfied;
+	}
+
+	private boolean RBProperty4(Node node){
+		boolean satisfied=true;
+
+		if (node.color==true) {
+			if (node.left!=null) {
+				if (!node.left.color==false) {
+					satisfied=false;
+				}
+			}
+
+			if (node.right!=null) {
+				if (!node.right.color==false) {
+					satisfied=false;
+				}
+			}
+		}
+
+		// recursive calls for left and right subtree
+		if (node.left!=null) {
+			satisfied=satisfied & RBProperty4(node.left);
+		}
+
+		if (node.right!=null) {
+			satisfied=satisfied & RBProperty4(node.right);
+		}
+
+		return satisfied;
+	}
+}

@@ -1,0 +1,116 @@
+%Lab 9 Report
+%LabName
+
+\documentclass{article}
+\usepackage{setspace}
+\usepackage[margin = 1in]{geometry}
+%---------------------------------------------------------------------------
+%	TITLE SECTION
+%---------------------------------------------------------------------------
+\title{Experiment 9 \\ The Current Balance}
+\author{by \\ Austin Haggard}
+
+\date{
+	Experiment Performed: April 1 2015 \\
+	Report Submitted: April 8 2015 \\[11pt]
+	Lab Partner: \\ Adam hill \\ Aalbulushi \\[11pt] 
+	GSA: \\ C. Monroe
+}
+%---------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\section*{Introduction:}
+\setcounter{page}{1}
+%---------------------------------------------------------------------------
+%	INTRODUCTION... What we are measuring and what we are comparing it too 	/ dont use first person / audience is another student
+%---------------------------------------------------------------------------
+In this experiment we set up a current balance apparatus.  This apparatus reflected a laser onto a meter stick so we could measure the change in where the laser is pointing.  We then added weight to the apparatus and changed the applied current until the laser returned to the original position.  We did this multiple times with the intent of calculating magnetic permeability and comparing it to the theoretical value.
+%---------------------------------------------------------------------------
+\newpage
+
+%---------------------------------------------------------------------------
+%	DATA
+%---------------------------------------------------------------------------
+%	On a seperate page normally
+%---------------------------------------------------------------------------
+
+\section*{Data Analysis:}
+\setcounter{page}{3}
+%---------------------------------------------------------------------------
+%	DATA ANALYSIS.. All equations used
+%---------------------------------------------------------------------------
+In this experiment we had to find the value "s" which is the seperation distance of the bottom of the upper rod and the top of the lower  rod.  We used the equation below:
+\[s=\frac{a}{2b}D\]
+\[\frac{.218}{2(1.45)}6.3 = .996m\]
+\\
+We the need to calculate the value of d which will be used later to help find the experimental value.
+\[d=s+r_{upper}+r_{lower}\]
+\[.996+\frac{.0034}{2}+\frac{.0066}{2}=1.0007\]
+\\
+We used the command Linest() to find the slope, Y intercept, and Errors for these.  To find the experimental value  of magnetic permeability we used the following equation.
+\[\frac{d}{L}Slope\]
+\[\frac{1}{.265}6.8*10^7=2.6*10^{-6}\]
+\\
+To find the difference all we do is subtract the theoretical and experimental values.
+\[T - E = d\]
+\[2.6*10^{-6} -  2.0* 10^{-7}=2.4*10^{-6}\]
+\\
+Then to find sigma D we take the square root of errors to the power of two  There is only one measurement of error so this is sigma D.
+\[\sqrt{\sum E^2}\]
+\[\sqrt{(1.54*10^{-8})^2} = 1.54*10^{-8}\]
+\\
+To find percent difference we use the following equation:
+
+\[100-\frac{d}{E} * 100\]
+\[100-\frac{2.4*10^{-6}}{2.6*10^{-6}} * 100 = 7.7\%\]
+%---------------------------------------------------------------------------
+\newpage
+
+\section*{Table of Results:}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+%--------------------------------------------------------------------------
+%	TABLE OF RESULTS
+%--------------------------------------------------------------------------
+	Experimental: 2.6E-6 & Theoretical: 2.0E-7  \\ \hline
+	Discrepancy: 2.4E-6   & Percent Difference: 7.7\% \\
+%---------------------------------------------------------------------------
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Discussion:}
+\doublespace
+%---------------------------------------------------------------------------
+%	DISCUSSION
+%---------------------------------------------------------------------------
+%---------------------------------------------------------------------------
+%	short paragraph on physics of the experiment
+%---------------------------------------------------------------------------
+this experiment let us calculate the value of magnetic permeability.  We did this by measuring how much weight it took to move a laser, reflecting off the apparatus's mirror, back to it's original position.  In this experiment the force direction of the upper rod due to the vertical component of Earth's magnetic field is pointed to the left of the current balance apparatus.  There is also an opposite force that compensates.  this force is from the wire going in the opposite direction.  Some errors that could of occurred in this experiment and things such as viewing the laser on the meter stick, and the power supply not giving a current reading as accurate as a multimeter.  When viewing the laser the entire point is about 2mm across and glowing making it difficult to precisely gauge the location, this would be considered a random error in measurement.  Error created by using the power supply as a current measurement would be considered an intrinsic random error.The largest error would likely be the visual error of the laser.These errors didn't seem to effect our results very much because we still came out with a decent measurement.  Our results would still be considered a failure though because our difference is greater than the allowed error of sigma D.
+
+%---------------------------------------------------------------------------
+%	SOURCES OF EXPERIMENTAL ERROR TO OCCUR ie.. each category, 			 		random\intrinsic and how they effected the results, and which error is 	the largest
+%---------------------------------------------------------------------------
+  
+  
+%---------------------------------------------------------------------------
+%	State wether it was a success / compare theoreticle and experiemntal.  	Explain discrepencies larger than normal
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+\singlespace
+\newpage
+
+\section*{Conclusion:}
+%---------------------------------------------------------------------------
+%	CONCLUSION... two sentences summerize experiment.  State whether it 			was a success and compare experimental / theoretical results.
+%---------------------------------------------------------------------------
+In this experiment we measured the value of magnetic permeability.  We did this by measuring the current needed to move a laser with a specific weight back to it's original height.  Our results were pretty close to the theoretical value, but this experiment would still be considered a failure because our difference is greater than our sigma D.
+%--------------------------------------------------------------------------
+\end{document}

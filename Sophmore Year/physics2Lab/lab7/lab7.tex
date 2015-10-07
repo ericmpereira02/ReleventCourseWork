@@ -1,0 +1,140 @@
+%Lab 7 Report
+%The R-C Circuit
+
+\documentclass{article}
+\usepackage{setspace}
+\usepackage[margin = 1in]{geometry}
+\usepackage{graphicx}
+\graphicspath{ {/home/ahaggard/Pictures/} }
+%---------------------------------------------------------------------------
+%	TITLE SECTION
+%---------------------------------------------------------------------------
+\title{Experiment 7 \\ The R-C Circuit}
+\author{by \\ Austin Haggard}
+
+\date{
+	Experiment Performed: 3/18/15 \\
+	Report Submitted: 3/25/15 \\[11pt]
+	Lab Partner: \\ Daniela Freire \\[11pt] 
+	GSA: \\ C. Monroe
+}
+%---------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\section*{Introduction:}
+\setcounter{page}{1}
+%---------------------------------------------------------------------------
+%	INTRODUCTION... What we are measuring and what we are comparing it too 	/ dont use first person / audience is another student
+%---------------------------------------------------------------------------
+In this lab we created a series circuit with a resistor and capacitor.  We the unhooked the power source and measured the voltage drop over time using logger pro.  A time constant was also calculated.  Part two was skipped in this experiment due to missing equipment in the lab. Part three of this experiment we used the oscilloscope to measure a different time constant.   
+%---------------------------------------------------------------------------
+\newpage
+
+%---------------------------------------------------------------------------
+%	DATA
+%---------------------------------------------------------------------------
+%	On a seperate page normally
+%---------------------------------------------------------------------------
+
+\section*{Data Analysis:}
+\setcounter{page}{3}
+%---------------------------------------------------------------------------
+%	DATA ANALYSIS.. All equations used
+%---------------------------------------------------------------------------
+Part 1
+\\ \\
+Our theoretical time is going to be 10 seconds because that was the time measured.  We then have to calculate the experimental value of time using the C value given to us by logger pro in our graph.  To do this we use the equation below: \[\frac{1}{C} = T_e\]
+\[\frac{1}{.1499} = 6.67\]
+\\
+Part 3
+\\ \\ 
+During Part three we first need to calculate the theoretical value of our time constant.  This would be found by using the equation below:
+\[C*F\]
+\[1*10^{-10}*10000 = 10^{-6}\]
+
+Then to calculate the experimental value we measure to about 60\% of the height of the wave and multiply this by the capacitance.  Sample equation below:
+\[R*C = T_e\]
+\[50 * 10^{-6} = 5*10^{-5}\]
+
+Then we had to propagate error to later assist in finding sigma d.  This is done by using the equation below.
+\[\sqrt{\sum E^2}\]
+\[\sqrt{.1^2+.01^2} = .1\]
+
+To find the difference all we do is subtract the theoretical and experimental values.
+\[T - E = d\]
+\[10^{-7} - 5*10^{-5} = 4.9*10^{-5}\]
+
+Then to find sigma D we take the square root of errors to the power of two.
+\[\sqrt{\sum E^2}\]
+\[\sqrt{.1^2+.01^2} = .1\]
+
+To find percent difference we use the following equation:
+
+\[\frac{d}{E} * 100\]
+\[\frac{.000049}{.00005} * 100 = 2\%\]
+
+\newpage
+
+\begin{figure}[h]
+\caption{Shark Wave}
+\centering
+\includegraphics[scale = .050, angle = 180]{IMG_2907}
+\end{figure}
+
+\begin{figure}[h]
+\caption{Switched Display}
+\centering
+\includegraphics[scale= .050, angle = 180]{IMG_2908}
+\end{figure}
+
+%---------------------------------------------------------------------------
+\newpage
+
+\section*{Table of Results:}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+%--------------------------------------------------------------------------
+%	TABLE OF RESULTS
+%--------------------------------------------------------------------------
+	Experimental: .00005 & Theoretical: .000001  \\ \hline
+	Discrepancy: .000049   & Percent Difference: 2\% \\
+%---------------------------------------------------------------------------
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Discussion:}
+\doublespace
+%---------------------------------------------------------------------------
+%	DISCUSSION
+%---------------------------------------------------------------------------
+%---------------------------------------------------------------------------
+%	short paragraph on physics of the experiment
+%---------------------------------------------------------------------------
+In this experiment we measured voltage across capacitors and resistors in different ways.  In both of these experiments we found a time constant that we compared to a theoretical value.  The largest error in this experiment would be resistances that are unaccounted for such as the wires and built in errors for the resistors.  This would be an intrinsic random error because it the error can either be positive or negative and can't be fixed.  In part 3 of this experiment it was found that when resistance is added to the circuit the slope of the oscilloscope graph decreases.  Adding capacitance also decreases the slope.  The relationship between V\_c and V\_r is that V\_c + V\_r = V\_0 .  The third experiment was a success because d is less than sigma d.
+
+%---------------------------------------------------------------------------
+%	SOURCES OF EXPERIMENTAL ERROR TO OCCUR ie.. each category, 			 		random\intrinsic and how they effected the results, and which error is 	the largest
+%---------------------------------------------------------------------------
+  
+  
+%---------------------------------------------------------------------------
+%	State wether it was a success / compare theoreticle and experiemntal.  	Explain discrepencies larger than normal
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+\singlespace
+\newpage
+
+\section*{Conclusion:}
+%---------------------------------------------------------------------------
+%	CONCLUSION... two sentences summerize experiment.  State whether it 			was a success and compare experimental / theoretical results.
+%---------------------------------------------------------------------------
+In this lab we looked at the effect of capacitance in a circuit.  We adjusted the capacitance a resistance and also plotted graphs of the decay of power.  This experiment was a success because our d was less than our sigma d.  
+%--------------------------------------------------------------------------
+\end{document}

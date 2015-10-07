@@ -1,0 +1,35 @@
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
+
+public class SelectionSort {
+
+private static final Random RNG = new Random (Long.getLong ("seed", System.nanoTime())); 
+
+    public static void sort(List<Integer> data) {
+      int min = 0,first,tempIndex = 0;
+          for (int e = 0; i < data.size(); e++) {
+              first = data.get(i);
+              if (data.get(e) < first) {
+                  min = data.get(e);
+                  tempIndex = e;
+                  data.set(i, min);
+                  data.set(tempIndex, first);
+              }
+          }
+    }
+
+    public static void main (final String[] args) { 
+       int listLength = Integer.parseInt(args[0]);
+       List<Integer> arrList = new MyArrayList();
+       for(int i = 1; i < listLength + 1; i++) {
+           arrList.add(i);
+       }
+       Collections.shuffle(arrList, RNG);
+       System.out.printf("%s%n%s", "Shuffled:",arrList.toString());
+       sort(arrList);
+       System.out.printf("%s%n%s", "Sorted:",arrList.toString());
+   }
+
+}

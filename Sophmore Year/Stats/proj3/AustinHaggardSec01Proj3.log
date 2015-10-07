@@ -1,0 +1,507 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.26)  27 APR 2015 21:15
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**AustinHaggardSec01Proj3.tex
+(./AustinHaggardSec01Proj3.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 4 languages loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count87
+\Gm@cntv=\count88
+\c@Gm@tempcnt=\count89
+\Gm@bindingoffset=\dimen103
+\Gm@wd@mp=\dimen104
+\Gm@odd@mp=\dimen105
+\Gm@even@mp=\dimen106
+\Gm@layoutwidth=\dimen107
+\Gm@layoutheight=\dimen108
+\Gm@layouthoffset=\dimen109
+\Gm@layoutvoffset=\dimen110
+\Gm@dimlist=\toks15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
+))
+\Gin@req@height=\dimen111
+\Gin@req@width=\dimen112
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grffile.sty
+Package: grffile 2012/04/05 v1.16 Extended file name support for graphics (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package grffile Info: Option `multidot' is set to `true'.
+Package grffile Info: Option `extendedchars' is set to `false'.
+Package grffile Info: Option `space' is set to `true'.
+Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 486.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+\XKV@toks=\toks16
+\XKV@tempa@toks=\toks17
+\XKV@depth=\count91
+File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box26
+)
+\tc@llx=\dimen113
+\tc@lly=\dimen114
+\tc@urx=\dimen115
+\tc@ury=\dimen116
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen117
+\adjbox@Height=\dimen118
+\adjbox@Depth=\dimen119
+\adjbox@Totalheight=\dimen120
+
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count92
+)
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box27
+\sift@deathcycles=\count93
+\@vwid@loff=\dimen121
+\@vwid@roff=\dimen122
+))
+(./AustinHaggardSec01Proj3.aux)
+\openout1 = `AustinHaggardSec01Proj3.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count94
+\scratchdimen=\dimen123
+\scratchbox=\box28
+\nofMPsegments=\count95
+\nofMParguments=\count96
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count97
+\MPscratchDim=\dimen124
+\MPnumerator=\count98
+\makeMPintoPDFobject=\count99
+\everyMPtoPDFconversion=\toks19
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_001.png, id=1, 674.52pt 
+x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_001.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_001.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+001.png used on input line 16.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_002.png, id=2, 674.52pt 
+x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_002.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_002.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+002.png used on input line 20.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_003.png, id=3, 674.52pt 
+x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_003.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_003.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+003.png used on input line 24.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_004.png, id=4, 673.51625
+pt x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_004.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_004.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+004.png used on input line 28.
+(pdftex.def)             Requested size: 114.93875pt x 119.90567pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_005.png, id=5, 674.52pt 
+x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_005.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_005.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+005.png used on input line 34.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_006.png, id=6, 674.52pt 
+x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_006.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_006.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+006.png used on input line 38.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_007.png, id=7, 674.52pt 
+x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_007.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_007.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+007.png used on input line 42.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_008.png, id=8, 674.52pt 
+x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_008.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_008.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+008.png used on input line 46.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_009.png, id=9, 674.52pt 
+x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_009.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_009.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+009.png used on input line 53.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_010.png, id=10, 674.52pt
+ x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_010.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_010.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+010.png used on input line 57.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_011.png, id=11, 674.52pt
+ x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_011.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_011.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+011.png used on input line 61.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_012.png, id=12, 674.52pt
+ x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_012.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_012.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+012.png used on input line 65.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_013.png, id=13, 674.52pt
+ x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_013.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_013.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+013.png used on input line 71.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_014.png, id=14, 674.52pt
+ x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_014.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_014.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+014.png used on input line 75.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_015.png, id=15, 674.52pt
+ x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_015.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_015.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+015.png used on input line 79.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_016.png, id=16, 674.52pt
+ x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_016.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_016.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+016.png used on input line 83.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_017.png, id=17, 674.52pt
+ x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_017.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_017.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+017.png used on input line 89.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_018.png, id=18, 674.52pt
+ x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_018.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_018.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+018.png used on input line 93.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_019.png, id=19, 674.52pt
+ x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_019.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_019.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+019.png used on input line 97.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_020.png, id=20, 674.52pt
+ x 702.625pt>
+File: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_020.png Graphic fil
+e (type png)
+
+<use /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_020.png>
+Package pdftex.def Info: /home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_
+020.png used on input line 101.
+(pdftex.def)             Requested size: 114.93875pt x 119.72342pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/ahaggard/Pictures/R 
+Graphics: Device 2 (ACTIVE)_001.png> </home/ahaggard/Pictures/R Graphics: Devic
+e 2 (ACTIVE)_002.png> </home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_00
+3.png> </home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_004.png>]
+[2 </home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_005.png> </home/ahagg
+ard/Pictures/R Graphics: Device 2 (ACTIVE)_006.png> </home/ahaggard/Pictures/R 
+Graphics: Device 2 (ACTIVE)_007.png> </home/ahaggard/Pictures/R Graphics: Devic
+e 2 (ACTIVE)_008.png> </home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_00
+9.png> </home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_010.png> </home/a
+haggard/Pictures/R Graphics: Device 2 (ACTIVE)_011.png> </home/ahaggard/Picture
+s/R Graphics: Device 2 (ACTIVE)_012.png>] [3 </home/ahaggard/Pictures/R Graphic
+s: Device 2 (ACTIVE)_013.png> </home/ahaggard/Pictures/R Graphics: Device 2 (AC
+TIVE)_014.png> </home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_015.png> 
+</home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_016.png> </home/ahaggard
+/Pictures/R Graphics: Device 2 (ACTIVE)_017.png> </home/ahaggard/Pictures/R Gra
+phics: Device 2 (ACTIVE)_018.png> </home/ahaggard/Pictures/R Graphics: Device 2
+ (ACTIVE)_019.png> </home/ahaggard/Pictures/R Graphics: Device 2 (ACTIVE)_020.p
+ng>] (./AustinHaggardSec01Proj3.aux) )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 12 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 2840 strings out of 494985
+ 46709 string characters out of 6180355
+ 108027 words of memory out of 5000000
+ 6029 multiletter control sequences out of 15000+600000
+ 4108 words of font info for 16 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 36i,5n,35p,728b,308s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.p
+fb>
+Output written on AustinHaggardSec01Proj3.pdf (3 pages, 437575 bytes).
+PDF statistics:
+ 42 PDF objects out of 1000 (max. 8388607)
+ 14 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+

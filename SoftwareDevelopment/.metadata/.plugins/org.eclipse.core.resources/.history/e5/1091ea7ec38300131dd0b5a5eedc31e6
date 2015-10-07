@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+
+public class Students {
+
+    public static void main (final String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int numberOfStudents = sc.nextInt();
+        String[] firstName = new String[numberOfStudents];
+        String[] lastName = new String[numberOfStudents];
+        String[] grades = new String[numberOfStudents];
+        int[] numGrades = new int[numberOfStudents];
+        double mean = 0;
+        for(int i = 0; i < numberOfStudents; i++) {
+            firstName[i] = sc.next();
+            lastName[i] = sc.next();
+            grades[i] = sc.next();
+            numGrades[i] = Integer.parseInt(grades[i]);
+            mean += numGrades[i];
+        }
+        mean = mean / numberOfStudents;
+    }
+}

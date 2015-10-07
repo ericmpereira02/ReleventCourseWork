@@ -1,0 +1,99 @@
+import java.util.HashSet;
+import java.util.Iterator;
+
+
+public class HashTable<Key, Value> {
+
+	private int N; // size of hash table
+	private int M; // number of linked lists
+	private LinkedList<Key, Value>[] lists; // Hash table with collision resolution by chaining
+	public HashTable(int M) {
+		// M is the number of linked lists the table should be initialized with
+		int N = 0;
+		this.M = M;
+		this.N = N;
+		this.lists = new LinkedList[M];
+		for (int i = 0; i < M; i++) {
+			this.lists[i] = new LinkedList<Key, Value>();
+		}
+	}
+	
+	private int hash(Key key) {
+		
+		String strKey = key.toString();
+		int intKey = 0;
+		int strLength = strKey.length();
+		
+		final int RADIX = 128; // See CLSR book for details
+		
+		for (int i = 0; i < strKey.length(); i++) {
+			intKey = (int)(Math.pow(RADIX, (strLength - 1) - i)) * strKey.charAt(i) + intKey;
+		}
+		double A = (Math.sqrt(5) - 1) / 2;
+		
+		double res = intKey * A;
+		res = res - Math.floor(res);
+		int hashValue = (int) Math.floor(M * res);
+		
+		return hashValue;
+	}
+	
+	public Value get (Key key) {
+		//return Value, given key
+		return this.lists[hash(key)].get(key);
+	}
+	
+	public boolean contains(Key key) {
+		// true if key exists in the table, false otherwise
+		if (this.lists[hash(key)].contains(key))
+			return true;
+		else
+			return false;
+	}
+	
+	public void insert(Key key, Value val) {
+		// insert Key-Value pair into hashtable
+		this.lists[hash(key)].add(key, val);
+		this.N++;
+	}
+	
+	public void delete(Key key) {
+		// delete key from the hashtable.  
+		// Should only delete the first occurence of the key if there is more than one
+		this.lists[hash(key)].delete(key);
+		this.N--;
+	}
+	
+	public HashSet<Key> getKeys() {
+		//return HashSet of unique keys in the HashTable
+		HashSet<Key> hashset = new HashSet<Key>();
+		for (int i = 0; i < M; i++) {
+		 HashSet<Key> set = this.lists[i].getKeys();	
+		 hashset.addAll(set);
+		}
+		
+		return hashset;
+	}
+	
+	public String toString() {
+		String result = "";
+		// return string representation of the HashTable
+		for (int i = 0; i < M; i++) {
+			result += this.lists[i].toString();
+		}
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		HashTable<Integer, Integer> test = new HashTable<Integer, Integer>(3);
+		test.insert(1, 45);
+		test.insert(2, 33);
+		test.insert(3, 11);
+		test.insert(4, 12);
+		test.insert(4, 12);
+		test.insert(4, 12);
+		test.insert(4, 12);
+		test.insert(4, 12);
+		System.out.println(test.toString());
+	}
+}

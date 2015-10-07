@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+
+public class Students {
+
+    public static void main (final String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int numberOfStudents = sc.nextInt();
+        String[] firstName = new String[numberOfStudents];
+        String[] lastName = new String[numberOfStudents];
+        String[] fullName = new String[numberOfStudents];
+        String[] grades = new String[numberOfStudents];
+        double[] numGrades = new double[numberOfStudents];
+        double[] deviation = new double[numberOfStudents];
+        double mean = 0;
+        double devStep1 = 0, devStep2 = 0;
+        double stndDeviation;
+        for(int i = 0; i < numberOfStudents; i++) {
+            firstName[i] = sc.next();
+            lastName[i] = sc.next();
+            grades[i] = sc.next();
+            fullName[i] = firstName[i] + " " + lastName[i];
+            numGrades[i] = Integer.parseInt(grades[i]);
+            mean += numGrades[i];
+        }
+        mean = mean / numberOfStudents;
+        for(int i = 0; i < numberOfStudents; i++) {
+            devStep1 += (numGrades[i] - mean) * (numGrades[i] - mean);
+        }
+        devStep2 = devStep1 / numberOfStudents;
+        stndDeviation = Math.sqrt(devStep2);
+        for(int i = 0; i < numberOfStudents; i++) {
+            deviation[i] = (numGrades[i] - mean) / stndDeviation;
+        }
+        for(int i = 0; i < numberOfStudents; i++){
+            if (deviation[i] > 1.0)
+                grades[i] = "A";
+            else if (deviation[i] <= 1.0 && deviation[i] > 0.0)
+                grades[i] = "B";
+            else if (deviation[i] <= 0.0 && deviation[i] > -1.0)
+                grades[i] = "C";
+            else if (deviation[i] <= -1.0 && deviation[i] > -2.0)
+                grades[i] = "D";
+            else
+                grades[i] = "F";
+        }
+        System.out.printf("%-15s%8s%9s%n", "Name", "Grade", "Letter");
+        for(int i = 0; i < numberOfStudents; i++) {
+            System.out.printf("%-21s%1.0f%10s%n", fullName[i], numGrades[i], grades[i]);
+        }
+    }
+}

@@ -1,0 +1,19 @@
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
+
+
+public class SelectionSort extends Collections {
+
+private static final Random RNG = new Random (Long.getLong ("seed", System.nanoTime())); 
+
+    public static void main (final String[] args) { 
+        int listLength = Integer.parseInt(args[0]);
+       List<Integer> arrList = new MyArrayList();
+       for(int i = 0; i < listLength; i++) {
+           arrList.add(i);
+       }
+       shuffle(arrList, RNG);
+           
+       }
+}

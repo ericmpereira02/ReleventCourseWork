@@ -1,0 +1,103 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class WordCount  {
+
+	MapReduce<String, Integer> mapReduce;		// needed for map(), reduce() functions
+
+	int numMappers;								// number of computers for map function
+	int numReducers;							// number of computers for reduce function
+	
+	HashTable<String, Integer> mapHashTable;	// HashTable with <word,cpu>
+	HashTable<Integer, Pair<String, ArrayList<Integer>>> reduceHashTable;	// HashTable with <cpu,<word,list(word counts)>>
+
+	public WordCount(int numMappers_, int numReducers_,
+			MapReduce<String, Integer> mapReduce_) {
+				// constructor
+		this.mapReduce = mapReduce_;
+		this.numMappers = numMappers_;
+		this.numReducers = numReducers_;
+	}
+
+
+	public ArrayList<String> divide(String key) {
+		// divide string into list of chunks( lines in this case ). Nothing to implement here.
+		String[] tokens = key.split("\n");
+		ArrayList<String> stringList = new ArrayList<String>(tokens.length);
+
+		for (int i = 0; i < tokens.length; i++) {
+			stringList.add(tokens[i]);
+		}
+
+		return stringList;
+	}
+
+	public HashTable<Integer,ArrayList<String>> assignMapJobs(String key) {
+
+		// 1. divide key into chunks  using divide() function
+		// 2. assign each chunk to one of map computers enumerated from 0 to numMappers-1
+		// starting from cpu=0;
+		// for each line 
+		//		split it into words using
+		//		String[] words = toProcess.replaceAll("[^a-zA-Z ]", "").toLowerCase().split("\\s+");
+		//		add <cpu,words> into resulting HashMap
+		//		
+		//		increament cpu number using
+		//		cpu=(cpu+1)% numMappers;
+		ArrayList<String> jobs = this.divide(key);
+
+		return mapJobs;
+
+	}
+
+
+	public void processMapJobs(HashTable<Integer,ArrayList<String>> cpuVsWords){
+		
+		// process map jobs
+	
+		// for every unique cpu
+		//
+		//		Note: mapReduce.map() should be used here
+		//
+		// 		for every word assigned to that cpu
+		//			add the pair <cpu,word> into mapHashTable
+		//		
+	}
+
+
+	public HashTable<Integer, Pair<String, ArrayList<Integer>>> assignReduceJobs(){
+		
+		// perform reduce step
+		
+		// get list of unique words in mapHashTable
+		// starting from cpu=0;
+		// for each word
+		//		for as many times as word appears in the mapHashTable
+		// 			add <word,list(ints)> into result
+		//		add <cpu,pair(word,list(ints))> to the result
+		//		cpu=(cpu+1)% numReducers;
+		//
+		// example:
+		// assume mapHashTable has the following key-value pairs
+		// <"cat",1>
+		// <"cat",5>
+		// <"cat",2>
+		// then the following should be added: <cpu ID, pair("cat",list(1,5,2))>
+
+	}
+
+	public ArrayList<Pair<String, Integer>> processReduceJobs(
+			HashTable<Integer, Pair<String, ArrayList<Integer>>> reduceJobs){
+				
+		// process reduce jobs
+	
+		// for every unique cpu
+		//
+		//		Note: mapReduce.reduce() should be used here
+		//
+		// 		for every <word,list(ints)>
+		//			add mapReduce.reduce(<word,list(ints)>) to the result
+		//	
+
+}

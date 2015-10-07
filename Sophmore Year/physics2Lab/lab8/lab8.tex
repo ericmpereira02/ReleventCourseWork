@@ -1,0 +1,128 @@
+%Lab 8 Report
+%The Earths Magnetic Field
+
+\documentclass{article}
+\usepackage{setspace}
+\usepackage[margin = 1in]{geometry}
+%---------------------------------------------------------------------------
+%	TITLE SECTION
+%---------------------------------------------------------------------------
+\title{Experiment 8 \\ The Earth's Magnetic Field}
+\author{by \\ Austin Haggard}
+
+\date{
+	Experiment Performed: 3/25/15 \\
+	Report Submitted: 4/1/15 \\[11pt]
+	Lab Partners: \\ Steve Kalingauire \\ Chris Golus \\[11pt] 
+	GSA: \\ C. Monroe
+}
+%---------------------------------------------------------------------------
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\section*{Introduction:}
+\setcounter{page}{1}
+%---------------------------------------------------------------------------
+%	INTRODUCTION... What we are measuring and what we are comparing it too 	/ dont use first person / audience is another student
+%---------------------------------------------------------------------------
+In this experiment we first held a compass to a coil of wire with current running though it to examine how it effects the magnetic field.  We then used a Helmholtz coil help at 10 degree increments to measure the vector sum of the earth's magnetic field.  A bar magnet was also used to calculate the frequency which was used to calculate the magnetic field of earth.  These values were compared to the real value of earth's magnetic field.
+%---------------------------------------------------------------------------
+\newpage
+
+%---------------------------------------------------------------------------
+%	DATA
+%---------------------------------------------------------------------------
+%	On a seperate page normally
+%---------------------------------------------------------------------------
+
+\section*{Data Analysis:}
+\setcounter{page}{3}
+%---------------------------------------------------------------------------
+%	DATA ANALYSIS.. All equations used
+%---------------------------------------------------------------------------
+Part 2
+\\ \\
+The first thing we needed to calculate was the magnetic field of the coil.  This was done using the following equation.
+\[B_c=kI\]
+\[17 * 1.334*10^{-5} = 2.2678 * 10^{-4}\]
+\\
+We then need to calculate the magnetic field of earth using the following equation.
+\[B_e = B_c * cos(angle)\]
+\[2.27 * 10^{-4} * cos(10) = 2.233347 * 10^{-5}\]
+\\
+We also calculated the average and standard deviation using the AVERAGE and STDEV functions in excel.
+\\ \\
+Part 3
+\\ \\
+In this part of the experiment we first need to calculate the period.  We do this by taking the how long it took for 10 oscillations and divide that by 10.  Sample calculation below:
+\[P = \frac{t}{10}\]
+\[\frac{4.87}{10} = .487\]
+\\
+Then to calculate the frequency we divide one by the period.  Sample calculation below:
+\[f = \frac{1}{p}\]
+\[\frac{1}{.487} = 2.053\]
+\\
+To find the difference all we do is subtract the theoretical and experimental values.
+\[T - E = d\]
+\[.24 - 6.38 * 10^{-5}=.240\]
+\\
+
+Then to find sigma D we take the square root of errors to the power of two.
+\[\sqrt{\sum E^2}\]
+\[\sqrt{23063} = 23063\]
+
+To find percent difference we use the following equation:
+
+\[\frac{d}{E} * 100\]
+\[\frac{.240}{23063} * 100 = 99.99\%\]
+
+%---------------------------------------------------------------------------
+\newpage
+
+\section*{Table of Results:}
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+%--------------------------------------------------------------------------
+%	TABLE OF RESULTS
+%--------------------------------------------------------------------------
+	Experimental: 0000638 & Theoretical: .24  \\ \hline
+	Discrepancy: .24   & Percent Difference: 99.99\% \\
+%---------------------------------------------------------------------------
+\hline
+\end{tabular}
+\end{center}
+
+\section*{Discussion:}
+\doublespace
+%---------------------------------------------------------------------------
+%	DISCUSSION
+%---------------------------------------------------------------------------
+%---------------------------------------------------------------------------
+%	short paragraph on physics of the experiment
+%---------------------------------------------------------------------------
+In this lab we first examined how a coil of wire has a magnetic field by holding a compass to it.  when the compass is near the wire it points parallel to the magnetic field both on the inside and outside of the wire.  In part two of the experiment we rotated the large coils with a compass in the middle to calculate earth's magnetic field.  In the third part we calculated earth's magnetic field using oscillations of a bar magnet.  Some realistic sources of error in these experiments are things such as conduit running through the walls, metal lockers, and metal in the tables.  These will all throw off a magnetic field.  These would be considered intrinsic random errors.  Another thing that caused such a large error in our experiment is because in the third part we only incremented our power source by 1 volt every trial.  This created a very small current difference that made the measurements inconsistent with what was expected because they were so close together.  Our results were precise though, just not accurate.  Both experimental values of earth's magnetic field were very off.  neither fall in line with a d vs sigma d comparison.
+
+%---------------------------------------------------------------------------
+%	SOURCES OF EXPERIMENTAL ERROR TO OCCUR ie.. each category, 			 		random\intrinsic and how they effected the results, and which error is 	the largest
+%---------------------------------------------------------------------------
+  
+  
+%---------------------------------------------------------------------------
+%	State wether it was a success / compare theoreticle and experiemntal.  	Explain discrepencies larger than normal
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+\singlespace
+\newpage
+
+\section*{Conclusion:}
+%---------------------------------------------------------------------------
+%	CONCLUSION... two sentences summerize experiment.  State whether it 			was a success and compare experimental / theoretical results.
+%---------------------------------------------------------------------------
+In this lab we looked at the effect of magnetic fields and tried to calculate earth's magnetic field.  This experiment would be considered a failure under the constraints of d vs sigma d.  This is due to how close we adjusted the voltage and other built in errors of this lab.
+%--------------------------------------------------------------------------
+\end{document}

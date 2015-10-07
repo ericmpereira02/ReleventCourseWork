@@ -1,0 +1,93 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+
+
+
+public class CliquePercolation {
+	private Graph g;
+	private  int k;
+
+	private int[] communities;
+
+	/**
+	 * 
+	 * @param G
+	 * @param k
+	 */
+	public CliquePercolation(Graph G, int k) {
+		this.g = G;
+		this.k = k;
+	}
+	
+	
+	/**
+	 * 
+	 * @param n
+	 * @return
+	 */
+	public HashSet<HashSet<Integer>> findCliques(int n){
+        HashSet<HashSet<Integer>> answer = cliqueSizeTwo();
+        for(int i = 2; i < n; i++){
+            answer  = findCliquesRec(answer);
+        }
+        return answer;
+    }
+	
+    private HashSet<HashSet<Integer>> findCliquesRec(HashSet<HashSet<Integer>> prev){
+//        itterate over every small clique
+//            if there is other vertex in the graph that if added makes
+        HashSet<HashSet<Integer>> result = new HashSet<HashSet<Integer>>();
+        for(HashSet<Integer> c: prev){
+            for(int i = 0; i < g.V(); i++){
+                //check if I and all vertices in clique make a larger clique
+                if(largerClique(c, i)){
+                    HashSet<Integer> larger = new HashSet<Integer>();
+                    larger.addAll(c);
+                    larger.add(i);
+                    result.add(larger);
+                }
+            }
+        }
+        return result;
+    }
+    
+    private boolean largerClique(HashSet<Integer> clique, int v){
+        boolean result = true;
+        if(clique.contains(v)){
+            return false;
+        }
+        for(Integer vertex: clique){
+            if(!g.adj(v).contains(vertex)){
+                return false;
+            }
+        }
+        return result;
+    }
+    
+    private HashSet<HashSet<Integer>> cliqueSizeTwo(){
+        HashSet<HashSet<Integer>> q = new HashSet<HashSet<Integer>>();
+        for(int i = 0; i <g.V(); i++){
+            for(int j: g.adj(i)){
+                HashSet<Integer> s = new HashSet<Integer>();
+                s.add(i);
+                s.add(j);
+                q.add(s);
+            }
+        }
+        return q;
+    }
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public int[] findCommunities(){
+		// find all communities using clique perlocation.
+		// result should be an array where each vertex has community ID
+		// two vertices are from the same community if communities[i]==communities[j]
+		HashSet<HashSet<Integer>> cliques = findCliques(k);
+		int[] answer = new int[k];
+		return answer;
+	}
+
+}

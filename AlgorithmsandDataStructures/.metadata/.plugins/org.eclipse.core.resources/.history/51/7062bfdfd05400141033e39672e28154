@@ -1,0 +1,11 @@
+
+public class quickSort {
+	
+	void quick_Sort(int[] list, int first, int last) {
+		if (first >= last)
+			return;
+		int split = partition(list, first, last);
+				quickSort(list, first, split - 1);
+				quick_Sort(list, split + 1, last);
+	}
+}

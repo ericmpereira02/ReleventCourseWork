@@ -1,0 +1,14 @@
+
+public class Newton {
+
+    public static void main (final String args[]) {
+        int N = Integer.parseInt(args[0]);
+        double min = -1;
+        double max = 1;
+        double width = 2;
+        double length = 2;
+        
+        StdDraw.setXscale(min, 1);
+        StdDraw.setYscale(max, 1);
+    }
+}

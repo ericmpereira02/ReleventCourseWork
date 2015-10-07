@@ -1,0 +1,58 @@
+
+public class HashTable<Key, Value> {
+
+	private int N; // size of hash table
+	private int M; // number of linked lists
+	private LinkedList<Key, Value>[] lists; // Hash table with collision resolution by chaining
+	public HashTable(int M) {
+		// M is the number of linked lists the table should be initialized with
+		int N = 0;
+		this.M = M;
+		this.N = N;
+	}
+	
+	private int hash(Key key) {
+		
+		String strKey = key.toString();
+		int intKey = 0;
+		int strLength = strKey.length();
+		
+		final int RADIX = 128; // See CLSR book for details
+		
+		for (int i = 0; i < strKey.length(); i++) {
+			intKey = (int)(Math.pow(RADIX, (strLength - 1) - i)) * strKey.charAt(i) + intKey;
+		}
+		double A = (Math.sqrt(5) - 1) / 2;
+		
+		double res = intKey * A;
+		res = res - Math.floor(res);
+		int hashValue = (int) Math.floor(M * res);
+		
+		return hashValue;
+	}
+	
+	public Value get (Key key) {
+		//return Value, given key
+	}
+	
+	public boolean contains(Key key) {
+		// true if key exists in the table, false otherwise
+	}
+	
+	public void insert(Key key, Value val) {
+		// insert Key-Value pair into hashtable
+	}
+	
+	public void delete(Key key) {
+		// delete key from the hashtable.  
+		// Should only delete the first occurence of the key if there is more than one
+	}
+	
+	public HashSet<Key> getKeys() {
+		//return HashSet of unique keys in the HashTable
+	}
+	
+	public String toString() {
+		// return string representation of the HashTable
+	}
+}

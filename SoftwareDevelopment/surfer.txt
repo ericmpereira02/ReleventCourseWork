@@ -1,0 +1,1 @@
+If there is nothing to link to the array outDegree gets an out of bounds exception.  I spent a few hours trying to fix it and couldn't figure out how :(
