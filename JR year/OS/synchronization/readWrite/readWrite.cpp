@@ -15,20 +15,17 @@
 
 
 /* prototype for thread routine */
-void *producer ( void *ptr );
-void *consumer ( void *ptr );
+void *reader ( void *ptr );
+void *writer ( void *ptr );
 
 
 /* global vars */
 /* semaphores are declared global so they can be accessed
  in main() and in thread routine. */
-/* Semaphores used to manage threads that 
- * are adding and removing things from buffer */
-const int BUFFER_SIZE = 5;
+int readCount = 0;
 Semaphore mutex(1);
-Semaphore fillCount(0);
-Semaphore emptyCount(BUFFER_SIZE);
-vector<int> buffer;
+Semaphore readSem(1);
+Semaphore writeSem(1);
 
 
 int main()
@@ -47,10 +44,10 @@ int main()
     /* Note: you can check if thread has been
      successfully created by checking return value of
      pthread_create */
-    pthread_create (&thread_a, NULL, producer, (void *) &i[0]);
-    pthread_create (&thread_b, NULL, producer, (void *) &i[1]);
-    pthread_create (&thread_c, NULL, consumer, (void *) &i[2]);
-    pthread_create (&thread_d, NULL, consumer, (void *) &i[3]);
+    pthread_create (&thread_a, NULL, reader, (void *) &i[0]);
+    pthread_create (&thread_b, NULL, reader, (void *) &i[1]);
+    pthread_create (&thread_c, NULL, writer, (void *) &i[2]);
+    pthread_create (&thread_d, NULL, writer, (void *) &i[3]);
 
      // Join threads
     (void) pthread_join(thread_a, NULL);
@@ -63,34 +60,40 @@ int main()
 } /* main() */
 
 
-void *producer ( void *ptr ) {
+void *reader ( void *ptr ) {
 
     int threadNum; 
     threadNum = *((int *) ptr);
     // 100 is a number of choice to let it run a good amount of time
     for (int i = 0; i < 100; ++i) { 
-        emptyCount.wait();
+        readSem.wait();
         mutex.wait();
-        buffer.push_back(1);
-        printf("Producer thread %d: Adding a number to the list\n", threadNum);
+        readCount++;
+        if (readCount == 1)
+            writeSem.wait();
         mutex.signal();
-        fillCount.signal();
+        readSem.signal();
+        printf("Reader thread %d: Reading is now taking place\n", threadNum);
+        mutex.wait();
+        readCount--;
+        if (readCount == 0)
+            writeSem.signal();
+        mutex.signal();
     }
     pthread_exit(0); /* exit thread */
 }
 
-void *consumer ( void *ptr ) {
+void *writer ( void *ptr ) {
  
     int threadNum; 
     threadNum = *((int *) ptr);
     // 100 is a number of choice to let it run a good amount of time
     for (int i = 0; i < 100; ++i) {
-       fillCount.wait();
-       mutex.wait();
-       buffer.erase(buffer.begin());
-       printf("Consumer thread %d: Removing a number from the list\n", threadNum);
-       mutex.signal();
-       emptyCount.signal();
+        readSem.wait();
+        writeSem.wait();
+        printf("Writer thread %d: Writing is now taking place\n", threadNum);
+        writeSem.signal();
+        readSem.signal();
     } 
         
     pthread_exit(0); /* exit thread */
